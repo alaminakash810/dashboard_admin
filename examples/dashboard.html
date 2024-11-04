@@ -384,6 +384,18 @@ Coded by www.creative-Society.com
 
     function acbutton() {
       window.alert("acbutton");
+  // Add an event listener for the button click
+  document.getElementById("myButton").addEventListener("click", function() {
+    // Call the alert function
+    acbutton();
+
+    // Google Analytics tracking code
+    gtag('event', 'button_click', {
+      'event_category': 'Button',
+      'event_label': 'My Button',
+      'value': 1
+    });
+  });
     }
   </script>
 </body>
